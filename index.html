@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalScholarOrbit | Find Fully Funded Scholarships Worldwide</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Find the latest fully funded international scholarships for 2025. Explore study opportunities for Bachelors, Masters, and PhD degrees worldwide.">
+    <meta name="keywords" content="scholarship, study abroad, education, bachelors, masters, phd, fully funded, italy scholarships, turkiye burslari">
+    <meta name="author" content="GlobalScholarOrbit">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://globalscholarorbit.com/">
+    <meta property="og:title" content="GlobalScholarOrbit | Find Fully Funded Scholarships Worldwide">
+    <meta property="og:description" content="Find the latest fully funded international scholarships for 2025. Updated daily.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Slider Styles */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+        .slider-container {
+            width: 100%;
+            height: 100%;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .hero-content {
+            z-index: 2;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: background 0.3s;
+        }
+        .slider-nav:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .prev { left: 20px; }
+        .next { right: 20px; }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .slider-dot.active {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header id="header-placeholder"></header>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <!-- Slide 1: Global Search -->
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                <div class="container hero-content">
+                    <h1>Find Scholarships Around the World <br> Fully Funded & Updated Daily</h1>
+                    <p>Your gateway to global education. Explore thousands of opportunities for Bachelors, Masters, and PhD degrees.</p>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search by country, university, or degree...">
+                        <button type="button"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Italy Admissions -->
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                <div class="container hero-content text-left">
+                    <h1 style="font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Study in Italy 2025 <br> <span style="color: #4ade80;">Admissions Open!</span></h1>
+                    <p style="font-size: 1.2rem; max-width: 600px; margin-bottom: 30px;">
+                        <i class="fas fa-check-circle" style="color: #4ade80;"></i> No IELTS Required (MOI Accepted)<br>
+                        <i class="fas fa-check-circle" style="color: #4ade80;"></i> 100% Regional Scholarships (DSU, ER.GO)<br>
+                        <i class="fas fa-check-circle" style="color: #4ade80;"></i> Free Accommodation + €7000 Stipend
+                    </p>
+                    <a href="italy.html" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">Apply Now in Italy <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Slide 3: Turkiye Burslari -->
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                <div class="container hero-content">
+                    <h1 style="font-size: 3.5rem;">Turkiye Burslari Scholarship 2025 <br> <span style="color: #facc15;">(Opening Soon)</span></h1>
+                    <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); padding: 20px; border-radius: 10px; display: inline-block; margin-bottom: 20px;">
+                        <p style="font-size: 1.3rem; margin-bottom: 10px; font-weight: bold;">Fully Funded Government Scholarship</p>
+                        <ul style="list-style: none; padding: 0; text-align: left; display: inline-block;">
+                            <li><i class="fas fa-plane"></i> Free Return Flight Ticket</li>
+                            <li><i class="fas fa-university"></i> Full Tuition Fee Waver</li>
+                            <li><i class="fas fa-bed"></i> Free Accommodation + Insurance</li>
+                            <li><i class="fas fa-money-bill-wave"></i> Monthly Stipend</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <a href="https://turkiyeburslari.gov.tr/" target="_blank" class="btn btn-primary">Apply for Turkiye Burslari</a>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <div class="slider-dot active" onclick="goToSlide(0)"></div>
+                <div class="slider-dot" onclick="goToSlide(1)"></div>
+                <div class="slider-dot" onclick="goToSlide(2)"></div>
+            </div>
+            
+            <button class="slider-nav prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-nav next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Spotlight: Italy Benefits -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #f0fdf4 0%, #fff 100%);">
+        <div class="container">
+            <h2 class="section-title">Why Choose Italy for 2026?</h2>
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div class="feature-box" style="background: white; border-left: 4px solid var(--primary-color);">
+                    <i class="fas fa-euro-sign feature-icon" style="color: #10b981;"></i>
+                    <h3>Regional Scholarship</h3>
+                    <p>Apply for regional scholarships (DSU, Laziodisco, ER.GO) based on family income. Get up to <strong>€7000/year</strong> stipend.</p>
+                </div>
+                <div class="feature-box" style="background: white; border-left: 4px solid var(--primary-color);">
+                    <i class="fas fa-utensils feature-icon" style="color: #f59e0b;"></i>
+                    <h3>Free Benefits</h3>
+                    <p>Scholarship holders get <strong>Free Accommodation</strong> (Hostels) and <strong>Free Meals</strong> (Mensa cards) throughout their degree.</p>
+                </div>
+                <div class="feature-box" style="background: white; border-left: 4px solid var(--primary-color);">
+                    <i class="fas fa-language feature-icon" style="color: #3b82f6;"></i>
+                    <h3>Easy Admission</h3>
+                    <p>Many universities accept <strong>English Medium Letter</strong> instead of IELTS. High acceptance rate for international students.</p>
+                </div>
+                <div class="feature-box" style="background: white; border-left: 4px solid var(--primary-color);">
+                    <i class="fas fa-passport feature-icon" style="color: #ef4444;"></i>
+                    <h3>Schengen Visa</h3>
+                    <p>Study in Italy and travel freely across 27 Schengen countries. Post-study work visa opportunities available.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="italy.html" class="btn btn-primary" style="padding: 12px 30px;">View 50+ Italian Universities <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Simple Slider Logic for Index Page
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlide = 0;
+            else if (index < 0) currentSlide = slides.length - 1;
+            else currentSlide = index;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function moveSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>

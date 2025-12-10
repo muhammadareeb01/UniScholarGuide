@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italy Scholarships & Admissions | GlobalScholarOrbit</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Find the latest Italy scholarship and university admission deadlines for 2025-2026. Search by university and program level.">
+    <meta name="keywords" content="study in italy, italy scholarships, italian universities, bachelors in italy, masters in italy, phd in italy, dsu scholarship">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for Italy Table */
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .search-box {
+            position: relative;
+            max-width: 300px;
+            width: 100%;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px 40px 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .search-box i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        .filter-buttons .btn {
+            margin-right: 10px;
+            padding: 8px 16px;
+            border: 1px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .filter-buttons .btn.active, .filter-buttons .btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .table-responsive {
+            /* overflow-x: auto; */ /* Removed forced horizontal scroll container logic mostly */
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            /* Allow generic scroll only if strictly necessary on very small screens */
+            overflow-x: auto; 
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* min-width: 1000px; */ /* Removed fixed min-width to prevent forced scroll on desktop */
+        }
+        
+        th, td {
+            padding: 10px 8px; /* Reduced padding */
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem; /* Slightly smaller text */
+        }
+        
+        th {
+            background-color: black;
+            color: white;
+            font-weight: 600;
+            /* white-space: nowrap; */ /* Allowed wrapping to save space */
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .status-open { background-color: #10b981; } 
+        .status-closed { background-color: #ef4444; } 
+        
+        .fee-badge {
+            background-color: #fceabb; 
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+        
+        .btn-view-details {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn-view-details:hover {
+            background-color: #004d80; /* Darker shade of primary */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header id="header-placeholder"></header>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="background-color: var(--primary-color); color: white; padding: 40px 0;">
+        <div class="container">
+            <h1>Italy Universities Admission & Deadlines 2026-2027</h1>
+            <p>Find updated deadlines, detailed fees, and admission requirements for top Italian universities.</p>
+        </div>
+    </section>
+
+    <!-- Table Section -->
+    <section class="section-padding">
+        <div class="container">
+            
+            <div class="search-container">
+                <div class="filter-buttons">
+                    <button class="btn active" onclick="filterData('all')">All</button>
+                    <button class="btn" onclick="filterData('Bachelors')">Bachelors</button>
+                    <button class="btn" onclick="filterData('Masters')">Masters</button>
+                    <button class="btn" onclick="filterData('PhD')">PhD</button>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search University..." onkeyup="searchTable()">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="scholarship-table" id="italyTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">#</th>
+                            <th style="width: 25%;">Universities</th>
+                            <th style="width: 15%;">Admission Fees</th>
+                            <th style="width: 15%;">Deadline</th>
+                            <th style="width: 10%;">Status</th>
+                            <th style="width: 10%;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be populated here by JS -->
+                    </tbody>
+                </table>
+                
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search" style="font-size: 48px; color: #cbd5e1; margin-bottom: 15px;"></i>
+                    <p>No universities found matching your search.</p>
+                </div>
+
+                <!-- Pagination Controls -->
+                <div id="paginationControls" class="pagination-controls" style="display: flex; justify-content: center; margin-top: 20px; gap: 5px;"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="italy-script.js"></script>
+</body>
+</html>
