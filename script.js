@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                         `;
                         mainContent.appendChild(coursesDiv);
 
-                        document.title = `${uni.university} Admission | GlobalScholarOrbit`;
+                        document.title = `${uni.university} Admission | UniScholarGuide`;
                     }
                 })
                 .catch(err => console.error('Error loading detail data:', err));
