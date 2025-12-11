@@ -190,12 +190,54 @@
     </section>
 
     <!-- Footer -->
+    <div class="container ad-leaderboard" style="display: flex; justify-content: center; margin: 40px auto;">
+       <script type="text/javascript">
+          atOptions = {
+          	'key' : '8593ec149eb7ce98ea06bd4663c2a1c1',
+          	'format' : 'iframe',
+          	'height' : 90,
+          	'width' : 728,
+          	'params' : {}
+          };
+       </script>
+       <script type="text/javascript" src="//www.highperformanceformat.com/8593ec149eb7ce98ea06bd4663c2a1c1/invoke.js"></script>
+    </div>
     <footer id="footer-placeholder"></footer>
 
     <!-- Back to Top Button -->
     <div id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </div>
+
+    <!-- Floating Side Ad -->
+    <div class="side-ad-container">
+        <button onclick="this.parentElement.style.display='none'" style="position: absolute; top: -25px; right: 0; background: #333; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; cursor: pointer; font-size: 12px; line-height: 20px; text-align: center;">&times;</button>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '83f4bf256718ede0c9425cbbe09b027b',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/83f4bf256718ede0c9425cbbe09b027b/invoke.js"></script>
+    </div>
+    <style>
+        .side-ad-container {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: none; 
+        }
+        @media (min-width: 1400px) {
+            .side-ad-container {
+                display: block;
+            }
+        }
+    </style>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
