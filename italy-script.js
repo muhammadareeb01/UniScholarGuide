@@ -37,12 +37,12 @@ function renderTable(data) {
             const feeDisplay = (uni.admission_fees && uni.admission_fees.toLowerCase().includes('no fee')) ? `<span class="fee-badge" style="background:#dcfce7; color:#166534;">${uni.admission_fees}</span>` : (uni.admission_fees || 'N/A');
 
             tr.innerHTML = `
-                <td>${index + 1}</td>
-                <td style="font-weight:600;">${uni.university}</td>
-                <td>${feeDisplay}</td>
-                <td>${uni.deadline}</td>
-                <td><span class="status-badge ${statusClass}">${uni.status}</span></td>
-                <td><a href="scholarship-detail.html?id=${uni.id}&country=italy" class="btn-view-details">Read More</a></td>
+                <td data-label="#">${index + 1}</td>
+                <td data-label="University" style="font-weight:600;">${uni.university}</td>
+                <td data-label="Admission Fees">${feeDisplay}</td>
+                <td data-label="Deadline">${uni.deadline}</td>
+                <td data-label="Status"><span class="status-badge ${statusClass}">${uni.status}</span></td>
+                <td data-label="Action"><a href="scholarship-detail.html?id=${uni.id}&country=italy" class="btn-view-details">Read More</a></td>
             `;
 
             tbody.appendChild(tr);

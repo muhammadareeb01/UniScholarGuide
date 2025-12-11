@@ -127,6 +127,86 @@
         .btn-view-details:hover {
             background-color: #004d80; /* Darker shade of primary */
         }
+
+        /* Mobile Responsive Card View */
+        @media screen and (max-width: 768px) {
+            .table-responsive {
+                border: none;
+                box-shadow: none;
+                background: transparent;
+                overflow-x: hidden; /* Disable horizontal scroll on mobile */
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                margin-bottom: 20px;
+                padding: 15px;
+                border: 1px solid #e2e8f0;
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #f1f5f9;
+                position: relative;
+                padding: 12px 0 12px 50%;
+                text-align: right;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap; /* Allow content to wrap */
+            }
+
+            td:last-child {
+                border-bottom: none;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: 700;
+                color: #334155;
+            }
+
+            /* Specific adjustments for cells */
+            td[data-label="#"] {
+                display: none; /* Hide index on mobile if simpler */
+            }
+            
+            td[data-label="University"] {
+                font-size: 1.1rem;
+                color: var(--primary-color);
+                text-align: left;
+                padding-left: 0;
+                padding-right: 0;
+                display: block; /* Make university name full width */
+                margin-bottom: 5px;
+            }
+            td[data-label="University"]::before {
+                display: none; /* Hide label for University as it's the title */
+            }
+
+            td[data-label="Action"] {
+                text-align: right;
+                justify-content: flex-end; /* Align button to right */
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,7 +240,7 @@
                 </div>
             </div>
 
-            <div class="table-container">
+            <div class="table-responsive">
                 <table class="scholarship-table" id="italyTable">
                     <thead>
                         <tr>
