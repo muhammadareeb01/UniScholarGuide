@@ -785,7 +785,7 @@ body {
 
 .container {
     width: 100%;
-    overflow: hidden; /* Prevent container overflow */
+    /* overflow: hidden; Removed to fix dropdown clipping */
 }
 
 /* Revert overflow hidden for ad containers specifically inside container */
