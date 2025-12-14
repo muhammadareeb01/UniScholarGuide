@@ -547,8 +547,9 @@ footer {
 }
 
 .detail-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+display:  flex;
+flex-direction: row;
+
   gap: 40px;
 }
 
@@ -664,7 +665,9 @@ footer {
 /* Responsiveness */
 @media (max-width: 900px) {
   .detail-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
   }
 }
 
@@ -730,9 +733,16 @@ footer {
     display: block;
   }
 
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    padding: 30px;
+  .detail-header, .main-content, .sidebar-widget, .contact-wrapper {
+    padding: 20px !important;
+  }
+
+  .detail-header h1 {
+      font-size: 1.7rem;
+  }
+
+  .content-block h2 {
+      font-size: 1.3rem;
   }
   
   /* Mobile Table Support - Handled in page-specific CSS or check italy.html */
