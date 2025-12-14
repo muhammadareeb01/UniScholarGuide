@@ -21,42 +21,7 @@
 <body>
 
     <!-- Navigation -->
-    <header>
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                <i class="fas fa-graduation-cap"></i> Uni<span>Scholar</span>Guide
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="scholarships.html" class="active">Scholarships <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="italy.html">Italy</a></li>
-                        
-                    <li><a href="dubai.html">Dubai / UAE</a></li>
-                     <li><a href="china.html">China</a></li>
-
-                      
-                         <li><a href="scholarships.html?country=germany">Germany</a></li>
-                           <li><a href="scholarships.html?country=usa">USA</a></li>
-                        <li><a href="scholarships.html?country=uk">UK</a></li>
-                        <li><a href="scholarships.html?country=canada">Canada</a></li>
-                        <li><a href="scholarships.html?country=australia">Australia</a></li>
-                     
-                        <li><a href="https://turkiyeburslari.gov.tr/" target="_blank">Turkiye Burslari (Opening Soon)</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <!-- <li><a href="contact.html">Contact</a></li> -->
-                <li><a href="scholarships.html" class="btn btn-primary" style="color: white;">Find Now</a></li>
-            </ul>
-
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
+    <header id="header-placeholder"></header>
 
     <!-- Page Header -->
     <section class="section-padding" style="background-color: var(--primary-color); color: white; padding: 60px 0;">
@@ -64,14 +29,15 @@
             <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Find Your Perfect Scholarship</h1>
             
             <!-- Search & Filter Wrapper -->
-            <div style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; backdrop-filter: blur(5px);">
-                <div class="search-bar" style="max-width: 100%; margin-bottom: 20px;">
-                    <input type="text" id="scholarshipSearch" placeholder="Search by scholarship name, country, or university...">
+            <!-- Search & Filter Wrapper -->
+            <div class="search-filter-wrapper">
+                <div class="search-bar">
+                    <input type="text" id="scholarshipSearch" placeholder="Search by scholarship name...">
                     <button type="button"><i class="fas fa-search"></i></button>
                 </div>
                 
-                <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                    <select id="countryFilter" class="btn" style="background: white; color: var(--text-color); border: none;">
+                <div class="filter-group">
+                    <select id="countryFilter" class="filter-select">
                         <option value="">All Countries</option>
                         <option value="usa">USA</option>
                         <option value="uk">UK</option>
@@ -81,14 +47,14 @@
                         <option value="turkey">Turkey</option>
                     </select>
                     
-                    <select id="degreeFilter" class="btn" style="background: white; color: var(--text-color); border: none;">
+                    <select id="degreeFilter" class="filter-select">
                         <option value="">Degree Level</option>
                         <option value="bachelors">Bachelors</option>
                         <option value="masters">Masters</option>
                         <option value="phd">PhD</option>
                     </select>
 
-                    <select id="fundingFilter" class="btn" style="background: white; color: var(--text-color); border: none;">
+                    <select id="fundingFilter" class="filter-select">
                         <option value="">Funding Type</option>
                         <option value="fully-funded">Fully Funded</option>
                         <option value="partial">Partial Funding</option>
@@ -97,6 +63,20 @@
             </div>
         </div>
     </section>
+
+    <!-- Ad Unit 1 (Before Grid) -->
+    <div class="container ad-leaderboard" style="display: flex; justify-content: center; margin: 20px auto;">
+       <script type="text/javascript">
+          atOptions = {
+          	'key' : '8593ec149eb7ce98ea06bd4663c2a1c1',
+          	'format' : 'iframe',
+          	'height' : 90,
+          	'width' : 728,
+          	'params' : {}
+          };
+       </script>
+       <script type="text/javascript" src="//www.highperformanceformat.com/8593ec149eb7ce98ea06bd4663c2a1c1/invoke.js"></script>
+    </div>
 
     <!-- Scholarships Grid -->
     <section class="section-padding">
@@ -110,6 +90,20 @@
             </div>
         </div>
     </section>
+
+    <!-- Ad Unit 2 (Before Footer) -->
+    <div class="container ad-leaderboard" style="display: flex; justify-content: center; margin: 40px auto;">
+       <script type="text/javascript">
+          atOptions = {
+          	'key' : '8593ec149eb7ce98ea06bd4663c2a1c1',
+          	'format' : 'iframe',
+          	'height' : 90,
+          	'width' : 728,
+          	'params' : {}
+          };
+       </script>
+       <script type="text/javascript" src="//www.highperformanceformat.com/8593ec149eb7ce98ea06bd4663c2a1c1/invoke.js"></script>
+    </div>
 
     <!-- Footer -->
     <footer>

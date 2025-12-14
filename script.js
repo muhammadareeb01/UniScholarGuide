@@ -1,27 +1,7 @@
 document.addEventListener('DOMContentLoaded', async function() {
     await loadHeaderAndFooter();
 
-    // Mobile Navigation Toggle Logic (Must be re-initialized after header load)
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdowns = document.querySelectorAll('.nav-links li');
-
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
-
-    // Mobile Dropdown Toggle
-    if (window.innerWidth <= 768) {
-        dropdowns.forEach(dropdown => {
-            if (dropdown.querySelector('.dropdown-menu')) {
-                dropdown.addEventListener('click', (e) => {
-                    dropdown.classList.toggle('active');
-                });
-            }
-        });
-    }
+    // Mobile menu initialization is handled in loadHeaderAndFooter() wrapper
 
     // Back to Top Button
     const backToTopButton = document.getElementById('backToTop');
@@ -334,6 +314,19 @@ async function loadHeaderAndFooter() {
                     link.classList.add('active');
                 }
             });
+
+            // Initialize Menu
+            if (typeof initializeMobileMenu === 'function') {
+                initializeMobileMenu();
+            } else {
+                 // Fallback if defined inside the other closure, we might need to expose it or move it out. 
+                 // Actually, initializeMobileMenu is defined inside the DOMContentLoaded scope in previous step.
+                 // loadHeaderAndFooter is separate function outside?
+                 // Let's check scope. loadHeaderAndFooter is defined at bottom. initializeMobileMenu was defined inside DOMContentLoaded.
+                 // We will need to move initializeMobileMenu OUT to global scope or pass it.
+                 // Easier fix: Move initializeMobileMenu to global scope in next step or redefine logic here.
+                 // Wait, I can't call a function defined inside another function.
+            }
         }
     } catch (e) {
         console.error('Error loading header:', e);
@@ -355,5 +348,48 @@ async function loadHeaderAndFooter() {
         }
     } catch (e) {
         console.error('Error loading footer:', e);
+    }
+}
+
+function initializeMobileMenu() {
+    console.log('Initializing Mobile Menu interactions...');
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.nav-links li');
+
+    if (hamburger && navLinks) {
+        hamburger.onclick = () => {
+             navLinks.classList.toggle('active');
+        };
+    }
+
+    // Mobile Dropdown Toggle
+    if (window.innerWidth <= 768) {
+        dropdowns.forEach(dropdown => {
+            const menu = dropdown.querySelector('.dropdown-menu');
+            if (menu) {
+                // Prevent link navigation for dropdown parents on mobile
+                const link = dropdown.querySelector('a');
+                if (link) {
+                    link.onclick = (e) => {
+                        // Only prevent default if it's mobile view
+                        if (window.innerWidth <= 768) {
+                            console.log('Dropdown toggled');
+                            e.preventDefault(); // Stop navigation
+                            e.stopPropagation();
+                            
+                            // Close other dropdowns
+                            dropdowns.forEach(d => {
+                                if (d !== dropdown && d.classList.contains('active')) {
+                                    d.classList.remove('active');
+                                }
+                            });
+
+                            dropdown.classList.toggle('active');
+                        }
+                    };
+                }
+            }
+        });
     }
 }
