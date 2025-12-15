@@ -286,6 +286,97 @@ document.addEventListener('DOMContentLoaded', async function() {
                 })
                 .catch(err => console.error('Error loading detail data:', err));
         }
+
+        if (id && country === 'japan') {
+            fetch('japan_data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const uni = data.find(item => item.id == id);
+                    if (uni) {
+                        // Update Header
+                        document.querySelector('.detail-header h1').textContent = uni.university;
+                        document.querySelector('.detail-header .card-tag').textContent = uni.status === 'Open' ? 'Open for Application' : 'Closed';
+                        // Update Meta
+                        const metaSpans = document.querySelectorAll('.detail-meta span');
+                        if (metaSpans.length >= 4) {
+                            metaSpans[0].innerHTML = '<i class="fas fa-flag"></i> Japan';
+                            metaSpans[1].innerHTML = '<i class="fas fa-university"></i> ' + uni.university;
+                            metaSpans[2].innerHTML = '<i class="far fa-clock"></i> Deadline: ' + uni.deadline;
+                            metaSpans[3].innerHTML = '<i class="fas fa-dollar-sign"></i> Fee: ' + uni.admission_fees;
+                        }
+                        
+                        // Update Link
+                        const applyLink = document.querySelector('.detail-header .btn-primary');
+                        if (applyLink) {
+                            applyLink.href = uni.application_link;
+                            applyLink.textContent = 'Apply Now';
+                        }
+
+
+                        // Update Description
+                        const descSection = document.querySelector('.main-content .content-block p');
+                        if (descSection) {
+                            descSection.textContent = uni.description;
+                        }
+                        
+                        // Inject Additional Details
+                        const mainContent = document.querySelector('.main-content');
+                        
+                        const extraInfoDiv = document.createElement('div');
+                        extraInfoDiv.id = 'japan-extra-info';
+                        extraInfoDiv.innerHTML = `
+                            <div class="content-block" style="margin-top: 30px;">
+                                <h2 style="color: var(--secondary-color);">Language Requirements</h2>
+                                <p><i class="fas fa-language" style="color: var(--primary-color); margin-right: 8px;"></i> <strong>Status:</strong> ${uni.english_certificate}</p>
+                                <p style="margin-top: 10px; background: #f8fafc; padding: 15px; border-left: 4px solid var(--primary-color); border-radius: 4px;">
+                                    ${uni.english_requirement_detail}
+                                </p>
+                            </div>
+
+                            <div class="content-block" style="margin-top: 30px;">
+                                <h2 style="color: var(--secondary-color);">Program Benefits (Fully Funded)</h2>
+                                <p>This fellowship covers all major expenses and provides a handsome salary.</p>
+                                
+                                <div style="margin-top: 15px; background: #fffbe6; padding: 15px; border: 1px solid #ffe58f; border-radius: 6px;">
+                                    <h4 style="margin-bottom: 10px; color: #b76e00;"><i class="fas fa-coins"></i> Fellowship Perks</h4>
+                                    <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li><strong>Monthly Salary:</strong> JPY 220,000 (Approx. $1,500)</li>
+                                        <li><strong>Accommodation:</strong> Free Room included</li>
+                                        <li><strong>Utilities:</strong> Electricity & Wi-Fi covered</li>
+                                        <li><strong>Meals:</strong> Provided throughout the program</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="content-block" style="margin-top: 30px;">
+                                <h2 style="color: var(--secondary-color);">Application Roadmap</h2>
+                                <div class="timeline" style="border-left: 2px solid #e2e8f0; margin-left: 10px; padding-left: 20px;">
+                                    <div style="margin-bottom: 20px; position: relative;">
+                                        <div style="position: absolute; left: -26px; top: 5px; width: 12px; height: 12px; background: var(--primary-color); border-radius: 50%;"></div>
+                                        <h4 style="margin-bottom: 5px;">1. Online Application</h4>
+                                        <p style="font-size: 0.9rem; color: #64748b;">Submit your resume and project proposal on the official portal.</p>
+                                    </div>
+                                    <div style="margin-bottom: 20px; position: relative;">
+                                        <div style="position: absolute; left: -26px; top: 5px; width: 12px; height: 12px; background: var(--primary-color); border-radius: 50%;"></div>
+                                        <h4 style="margin-bottom: 5px;">2. Interview Stage</h4>
+                                        <p style="font-size: 0.9rem; color: #64748b;">Shortlisted candidates will be invited for an online interview.</p>
+                                    </div>
+                                    <div style="position: relative;">
+                                        <div style="position: absolute; left: -26px; top: 5px; width: 12px; height: 12px; background: var(--primary-color); border-radius: 50%;"></div>
+                                        <h4 style="margin-bottom: 5px;">3. Visa & Arrival</h4>
+                                        <p style="font-size: 0.9rem; color: #64748b;">Apply for the CoE (Certificate of Eligibility) and Visa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        
+                        mainContent.appendChild(extraInfoDiv);
+
+                        document.title = `${uni.university} | UniScholarGuide`;
+                    }
+                })
+                .catch(err => console.error('Error loading japan detail data:', err));
+        }
     }
 });
 

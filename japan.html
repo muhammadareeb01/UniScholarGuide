@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Scholarships & Fellowships | UniScholarGuide</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Find the latest Japan scholarships and fellowship opportunities for 2026. Apply for AYF Fellowship and other fully funded programs in Japan.">
+    <meta name="keywords" content="study in japan, japan scholarships, ayf fellowship, japan internship, fully funded japan, work in japan, japan fellowship 2026">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for Table (Same as Italy) */
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .search-box {
+            position: relative;
+            max-width: 300px;
+            width: 100%;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px 40px 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .search-box i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        .filter-buttons .btn {
+            margin-right: 10px;
+            padding: 8px 16px;
+            border: 1px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .filter-buttons .btn.active, .filter-buttons .btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .table-responsive {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow-x: auto; 
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 10px 8px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+        
+        th {
+            background-color: black;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .status-open { background-color: #10b981; } 
+        .status-closed { background-color: #ef4444; } 
+        
+        .btn-view-details {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn-view-details:hover {
+            background-color: #004d80;
+        }
+
+        /* Mobile Responsive Card View */
+        @media screen and (max-width: 768px) {
+            .table-responsive {
+                border: none;
+                box-shadow: none;
+                background: transparent;
+                overflow-x: hidden;
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                margin-bottom: 20px;
+                padding: 15px;
+                border: 1px solid #e2e8f0;
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #f1f5f9;
+                position: relative;
+                padding: 12px 0 12px 50%;
+                text-align: right;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            td:last-child {
+                border-bottom: none;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: 700;
+                color: #334155;
+            }
+
+            td[data-label="#"] {
+                display: none;
+            }
+            
+            td[data-label="University"] {
+                font-size: 1.1rem;
+                color: var(--primary-color);
+                text-align: left;
+                padding-left: 0;
+                padding-right: 0;
+                display: block;
+                margin-bottom: 5px;
+            }
+            td[data-label="University"]::before {
+                display: none;
+            }
+
+            td[data-label="Action"] {
+                text-align: right;
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header id="header-placeholder"></header>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="background-color: var(--primary-color); color: white; padding: 40px 0;">
+        <div class="container">
+            <h1>Japan Scholarships & Fellowships 2026</h1>
+            <p>Explore full funded opportunities, internships, and fellowships in Japan.</p>
+        </div>
+    </section>
+
+    <!-- Why Choose Japan Section -->
+    <section class="section-padding" style="background-color: #fdfbf7;">
+        <div class="container">
+            <h2 class="section-title text-center">Why Study & Work in Japan?</h2>
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; justify-content: center;">
+                <div class="feature-box" style="background: white; border-top: 4px solid var(--primary-color); text-align: justify; padding: 25px;">
+                    <div style="text-align: center;"><i class="fas fa-yen-sign feature-icon" style="color: #10b981; font-size: 2rem; margin-bottom: 15px;"></i></div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 10px; text-align: center;">High Paying Fellowships</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Programs like AYF Fellowship offer monthly salaries (approx. ¥220,000) along with accommodation and food.</p>
+                </div>
+                <div class="feature-box" style="background: white; border-top: 4px solid #f59e0b; text-align: justify; padding: 25px;">
+                     <div style="text-align: center;"><i class="fas fa-torii-gate feature-icon" style="color: #f59e0b; font-size: 2rem; margin-bottom: 15px;"></i></div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 10px; text-align: center;">Cultural Experience</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Immerse yourself in Japan's rich history, traditions, and advanced technology while working or studying.</p>
+                </div>
+               
+                <div class="feature-box" style="background: white; border-top: 4px solid #ef4444; text-align: justify; padding: 25px;">
+                     <div style="text-align: center;"><i class="fas fa-briefcase feature-icon" style="color: #ef4444; font-size: 2rem; margin-bottom: 15px;"></i></div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 10px; text-align: center;">Career Opportunities</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Japan is actively seeking international talent for global projects, innovation, and business development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            
+            <div class="search-container">
+                <div class="filter-buttons">
+                    <button class="btn active" onclick="filterData('all')">All</button>
+                    <button class="btn" onclick="filterData('Fellowship')">Fellowships</button>
+                    <button class="btn" onclick="filterData('Masters')">Masters</button>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search Opportunity..." onkeyup="searchTable()">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="scholarship-table" id="japanTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">#</th>
+                            <th style="width: 25%;">Organization/University</th>
+                            <th style="width: 15%;">Type</th>
+                            <th style="width: 15%;">Deadline</th>
+                            <th style="width: 10%;">Status</th>
+                            <th style="width: 10%;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be populated here by JS -->
+                    </tbody>
+                </table>
+                
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search" style="font-size: 48px; color: #cbd5e1; margin-bottom: 15px;"></i>
+                    <p>No opportunities found matching your search.</p>
+                </div>
+
+                <!-- Pagination Controls -->
+                <div id="paginationControls" class="pagination-controls" style="display: flex; justify-content: center; margin-top: 20px; gap: 5px;"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="japan-script.js"></script>
+</body>
+</html>

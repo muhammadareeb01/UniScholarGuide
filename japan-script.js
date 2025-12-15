@@ -1,5 +1,5 @@
 
-let allUniversities = [];
+let allOpportunities = [];
 let currentFilteredData = [];
 let currentPage = 1;
 const itemsPerPage = 15;
@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchData() {
     try {
-        const response = await fetch('italy_data.json');
+        const response = await fetch('japan_data.json');
         const data = await response.json();
-        allUniversities = data;
+        allOpportunities = data;
         currentFilteredData = data; // Initialize filtered data
         renderTable();
-        console.log("Data loaded:", allUniversities.length);
+        console.log("Data loaded:", allOpportunities.length);
     } catch (error) {
-        console.error('Error fetching university data:', error);
+        console.error('Error fetching japan data:', error);
         document.getElementById('tableBody').innerHTML = '<tr><td colspan="10" style="text-align:center; color:red;">Failed to load data. Please try again later.</td></tr>';
     }
 }
@@ -37,25 +37,22 @@ function renderTable() {
         const endIndex = startIndex + itemsPerPage;
         const pageData = currentFilteredData.slice(startIndex, endIndex);
 
-        pageData.forEach((uni, index) => {
+        pageData.forEach((item, index) => {
             const tr = document.createElement('tr');
             
             // Determine status class
-            const statusClass = uni.status.toLowerCase() === 'open' ? 'status-open' : 'status-closed';
+            const statusClass = item.status.toLowerCase() === 'open' ? 'status-open' : 'status-closed';
             
-            // Determine Fee highlighting
-            const feeDisplay = (uni.admission_fees && uni.admission_fees.toLowerCase().includes('no fee')) ? `<span class="fee-badge" style="background:#dcfce7; color:#166534;">${uni.admission_fees}</span>` : (uni.admission_fees || 'N/A');
-
             // Calculate overall index for display
             const overallIndex = startIndex + index + 1;
 
             tr.innerHTML = `
                 <td data-label="#">${overallIndex}</td>
-                <td data-label="University" style="font-weight:600;">${uni.university}</td>
-                <td data-label="Admission Fees">${feeDisplay}</td>
-                <td data-label="Deadline">${uni.deadline}</td>
-                <td data-label="Status"><span class="status-badge ${statusClass}">${uni.status}</span></td>
-                <td data-label="Action"><a href="scholarship-detail.html?id=${uni.id}&country=italy" class="btn-view-details">Read More</a></td>
+                <td data-label="Organization" style="font-weight:600;">${item.university}</td>
+                <td data-label="Type">${item.program_levels.join(', ')}</td>
+                <td data-label="Deadline">${item.deadline}</td>
+                <td data-label="Status"><span class="status-badge ${statusClass}">${item.status}</span></td>
+                <td data-label="Action"><a href="scholarship-detail.html?id=${item.id}&country=japan" class="btn-view-details">Read More</a></td>
             `;
 
             tbody.appendChild(tr);
@@ -127,22 +124,12 @@ function renderPagination() {
 }
 
 function searchTable() {
-    const uniInput = document.getElementById('searchInput');
-    const courseInput = document.getElementById('courseInput');
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
     
-    const uniFilter = uniInput ? uniInput.value.toLowerCase() : '';
-    const courseFilter = courseInput ? courseInput.value.toLowerCase() : '';
-    
-    currentFilteredData = allUniversities.filter(uni => {
-        const matchUni = uni.university.toLowerCase().includes(uniFilter);
-        
-        // Match course if the university has a popular_courses array
-        // We join the array to a string to search for substrings (e.g. "Data" matches "Data Science")
-        const courseString = uni.popular_courses ? uni.popular_courses.join(' ').toLowerCase() : '';
-        const matchCourse = courseFilter === '' || courseString.includes(courseFilter);
-        
-        return matchUni && matchCourse;
-    });
+    currentFilteredData = allOpportunities.filter(item => 
+        item.university.toLowerCase().includes(filter)
+    );
     
     currentPage = 1; // Reset to first page
     renderTable();
@@ -159,10 +146,10 @@ function filterData(level) {
     if(target) target.classList.add('active');
 
     if (level === 'all') {
-        currentFilteredData = allUniversities;
+        currentFilteredData = allOpportunities;
     } else {
-        currentFilteredData = allUniversities.filter(uni => 
-            uni.program_levels.includes(level)
+        currentFilteredData = allOpportunities.filter(item => 
+            item.program_levels.includes(level)
         );
     }
     
