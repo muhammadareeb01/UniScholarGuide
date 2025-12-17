@@ -163,6 +163,48 @@ const scholarshipsData = [
         image: "https://scholarshipscorner.website/wp-content/uploads/2024/01/Turkiye-Burslari-Scholarship-2024.jpg",
         description: "Government-funded scholarship covering tuition, accommodation, stipend, and insurance for all degree levels.",
         link: "https://turkiyeburslari.gov.tr/"
+    },
+
+    // Brunei
+    {
+        id: "brunei-government-scholarship",
+        title: "Government of Brunei Darussalam Scholarship 2026",
+        country: "brunei",
+        university: "Brunei Universities",
+        level: "diploma, bachelors, masters",
+        funding: "fully-funded",
+        deadline: "February 15, 2026",
+        image: "https://images.unsplash.com/photo-1558285549-3fa446dce77d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        description: "Fully funded scholarship for Diploma, Undergraduate, and Master's degrees in Brunei. Covers tuition, airfare, accommodation, and allowances.",
+        link: "brunei.html"
+    },
+
+    // Hungary
+    {
+        id: "hungary-carthage-scholarship",
+        title: "University of Carthage Hungarian Scholarships 2026",
+        country: "hungary",
+        university: "Hungarian Public Universities",
+        level: "bachelors, masters, phd",
+        funding: "fully-funded",
+        deadline: "January 15, 2026",
+        image: "https://images.unsplash.com/photo-1549877452-9c3f8c01520b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        description: "Fully funded Stipendium Hungaricum scholarships for Bachelor, Master, and PhD degrees. Covers tuition, housing, and monthly stipend.",
+        link: "hungary.html"
+    },
+
+    // Ireland
+    {
+        id: "hardiman-phd-ireland",
+        title: "Hardiman PhD Scholarships 2026",
+        country: "ireland",
+        university: "University of Galway",
+        level: "phd",
+        funding: "fully-funded",
+        deadline: "February 6, 2026",
+        image: "https://images.unsplash.com/photo-1568803133646-e575bc8627eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        description: "Prestigious fully funded PhD scholarship in Ireland. Covers tuition fees + €25,000 annual stipend for 4 years.",
+        link: "ireland.html"
     }
 ];
 
