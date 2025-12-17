@@ -154,15 +154,63 @@ const scholarshipsData = [
     // Turkey
     {
         id: "turkiye-burslari",
-        title: "Turkiye Burslari Scholarship 2025",
+        title: "Turkiye Burslari Scholarship 2026",
         country: "turkey",
         university: "Turkish Universities",
-        level: "bachelors", // Also masters/phd
+        level: "bachelors, masters, phd",
         funding: "fully-funded",
-        deadline: "February 20, 2025",
+        deadline: "February 20, 2026",
         image: "https://scholarshipscorner.website/wp-content/uploads/2024/01/Turkiye-Burslari-Scholarship-2024.jpg",
-        description: "Government-funded scholarship covering tuition, accommodation, stipend, and insurance for all degree levels.",
-        link: "https://turkiyeburslari.gov.tr/"
+        description: "Government-funded scholarship covering tuition, accommodation, stipend, and insurance for all degree levels. No IELTS required.",
+        link: "turkey.html"
+    },
+    {
+        id: "kadir-has-turkey",
+        title: "Kadir Has University Scholarship 2026",
+        country: "turkey",
+        university: "Kadir Has University",
+        level: "bachelors",
+        funding: "partial",
+        deadline: "June 30, 2026",
+        image: "https://wiki.dint.upm.es/images/thumb/7/70/Kadir_Has_University.png/300px-Kadir_Has_University.png",
+        description: "White Doves Scholarship Program for undergraduate students. Applications open until June 2026.",
+        link: "turkey.html"
+    },
+    {
+        id: "sabanci-university-turkey",
+        title: "Sabanci University Scholarship 2026",
+        country: "turkey",
+        university: "Sabanci University",
+        level: "bachelors, masters, phd",
+        funding: "fully-funded",
+        deadline: "Varies",
+        image: "https://upload.wikimedia.org/wikipedia/tr/6/62/Sabanc%C4%B1_%C3%9Cniversitesi_logo.png",
+        description: "Fully funded scholarships for international students at all degree levels. Merit-based.",
+        link: "turkey.html"
+    },
+    {
+        id: "bilkent-university-turkey",
+        title: "Bilkent University Scholarship 2026",
+        country: "turkey",
+        university: "Bilkent University",
+        level: "bachelors, masters, phd",
+        funding: "fully-funded",
+        deadline: "Varies",
+        image: "https://w3.bilkent.edu.tr/logo/bilkent-logo-en.png",
+        description: "Comprehensive scholarship for high-achieving international students. Covers tuition and accommodation.",
+        link: "turkey.html"
+    },
+    {
+        id: "koc-university-turkey",
+        title: "Koc University Scholarship 2026",
+        country: "turkey",
+        university: "Koç University",
+        level: "masters, phd",
+        funding: "fully-funded",
+        deadline: "June 30, 2026",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-i25T2D3Yv9H_G8Jt7b_z4U7g8k_X5lXw&s",
+        description: "Premier Turkish university offering fully funded positions for graduate studies. No IELTS mandatory.",
+        link: "turkey.html"
     },
 
     // Brunei
