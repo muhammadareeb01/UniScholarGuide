@@ -253,6 +253,20 @@ const scholarshipsData = [
         image: "https://images.unsplash.com/photo-1568803133646-e575bc8627eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         description: "Prestigious fully funded PhD scholarship in Ireland. Covers tuition fees + €25,000 annual stipend for 4 years.",
         link: "ireland.html"
+    },
+
+    // Korea
+    {
+        id: "korea-scholarships-2026",
+        title: "Korean Scholarships 2026 | Fully Funded",
+        country: "korea",
+        university: "Top Korean Universities",
+        level: "bachelors, masters, phd",
+        funding: "fully-funded",
+        deadline: "Varies (Sep-Nov)",
+        image: "https://images.unsplash.com/photo-1538485399081-7191377e8241?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        description: "Fully funded scholarships for international students in South Korea. Covers tuition, stipend, and airfare. Includes SNU, KAIST, UST.",
+        link: "korea.html"
     }
 ];
 
