@@ -24,18 +24,7 @@ const scholarshipsData = [
         description: "A fully funded 5-month fellowship in Washington D.C. for activists, journalists, and scholars. Includes monthly stipend and housing.",
         link: "https://scholarshipscorner.website/reagan-fascell-democracy-fellowship/"
     },
-    {
-        id: "lpi-summer-usa",
-        title: "LPI Summer Internship in USA 2026",
-        country: "usa",
-        university: "Lunar and Planetary Institute",
-        level: "Internship",
-        funding: "fully-funded",
-        deadline: "December 12, 2025",
-        image: "https://scholarshipscorner.website/wp-content/uploads/2024/10/LPI-Summer-Internship-in-United-States.jpg",
-        description: "10-week summer internship program for undergraduates in science/engineering. Fully funded with stipend.",
-        link: "https://scholarshipscorner.website/lpi-summer-internship-united-states/"
-    },
+
     {
         id: "gates-scholarship-usa",
         title: "The Gates Scholarship 2026",
