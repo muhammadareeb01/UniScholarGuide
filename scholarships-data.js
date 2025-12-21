@@ -256,6 +256,19 @@ const scholarshipsData = [
         image: "https://images.unsplash.com/photo-1538485399081-7191377e8241?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         description: "Fully funded scholarships for international students in South Korea. Covers tuition, stipend, and airfare. Includes SNU, KAIST, UST.",
         link: "korea.html"
+    },
+    // Finland
+    {
+        id: "finland-scholarships-2026",
+        title: "Finland Scholarships Without IELTS 2026",
+        country: "finland",
+        university: "Finnish Universities",
+        level: "bachelors, masters, phd",
+        funding: "fully-funded",
+        deadline: "Varies (Jan-Mar)",
+        image: "https://images.unsplash.com/photo-1548625361-987cb281895a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        description: "Fully funded scholarships for Bachelor’s, Master’s, and PhD programs in Finland. IELTS not mandatory for many programs.",
+        link: "finland.html"
     }
 ];
 
