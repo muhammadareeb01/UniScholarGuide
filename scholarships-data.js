@@ -269,6 +269,32 @@ const scholarshipsData = [
         image: "https://images.unsplash.com/photo-1548625361-987cb281895a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         description: "Fully funded scholarships for Bachelor’s, Master’s, and PhD programs in Finland. IELTS not mandatory for many programs.",
         link: "finland.html"
+    },
+    // Italy
+    {
+        id: "sapienza-university-2026",
+        title: "Sapienza University of Rome Admission 2026-2027",
+        country: "italy",
+        university: "Sapienza University of Rome",
+        level: "bachelors, masters",
+        funding: "fully-funded",
+        deadline: "May 15, 2026",
+        image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        description: "Admissions open for 2026-2027. English-taught programs in AI, Engineering, Business, and more. Regional scholarships available.",
+        link: "sapienza.html"
+    },
+    // Malta
+    {
+        id: "university-of-malta-2026",
+        title: "University of Malta Scholarships 2026 | Fully Funded",
+        country: "malta",
+        university: "University of Malta",
+        level: "masters, phd",
+        funding: "fully-funded",
+        deadline: "April 30, 2026",
+        image: "https://images.unsplash.com/photo-1552055620-cd04cc5c5d0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        description: "Study in Europe. Fully funded / Partially funded Tuition Waivers for Master by Research & PhD students at UoM.",
+        link: "malta.html"
     }
 ];
 

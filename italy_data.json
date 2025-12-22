@@ -167,7 +167,8 @@
     "cgpa_requirements": "Varies by Program",
     "program_levels": ["Bachelors", "Masters", "PhD"],
     "popular_courses": ["Artificial Intelligence and Robotics", "Computer Science", "Data Science", "Economics and Communications", "Energy Engineering", "Clinical Psychosexology"],
-    "description": "Sapienza University of Rome is one of the largest European universities."
+    "description": "Sapienza University of Rome is one of the largest European universities.",
+    "custom_url": "sapienza.html"
   },
   {
     "id": 12,

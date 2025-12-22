@@ -49,13 +49,16 @@ function renderTable() {
             // Calculate overall index for display
             const overallIndex = startIndex + index + 1;
 
+            // Determine Link
+            const actionLink = uni.custom_url ? uni.custom_url : `scholarship-detail.html?id=${uni.id}&country=italy`;
+            
             tr.innerHTML = `
                 <td data-label="#">${overallIndex}</td>
                 <td data-label="University" style="font-weight:600;">${uni.university}</td>
                 <td data-label="Admission Fees">${feeDisplay}</td>
                 <td data-label="Deadline">${uni.deadline}</td>
                 <td data-label="Status"><span class="status-badge ${statusClass}">${uni.status}</span></td>
-                <td data-label="Action"><a href="scholarship-detail.html?id=${uni.id}&country=italy" class="btn-view-details">Read More</a></td>
+                <td data-label="Action"><a href="${actionLink}" class="btn-view-details">Read More</a></td>
             `;
 
             tbody.appendChild(tr);
