@@ -295,6 +295,19 @@ const scholarshipsData = [
         image: "https://images.unsplash.com/photo-1552055620-cd04cc5c5d0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         description: "Study in Europe. Fully funded / Partially funded Tuition Waivers for Master by Research & PhD students at UoM.",
         link: "malta.html"
+    },
+    // Russia
+    {
+        id: "open-doors-russia-2026",
+        title: "Russian Government & Open Doors Scholarship 2026",
+        country: "russia",
+        university: "Top Russian Universities",
+        level: "bachelors, masters, phd",
+        funding: "fully-funded",
+        deadline: "Dec 2025 - Jan 2026",
+        image: "https://images.unsplash.com/photo-1513326738677-b964603b136d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        description: "Fully funded scholarships by Russian Government and Open Doors Project. Covers tuition, accommodation and stipend.",
+        link: "russia.html"
     }
 ];
 
