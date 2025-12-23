@@ -803,3 +803,46 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+/* Floating Vertical Ads - Refixed */
+.floating-skyscraper-right {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 999; /* Increased z-index */
+    display: none; /* Default hidden on mobile */
+}
+
+.floating-skyscraper-left {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 999; /* Increased z-index */
+    display: none; /* Default hidden on mobile */
+}
+
+.ad-close-btn {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+/* Show only on large screens */
+@media (min-width: 1450px) {
+    .floating-skyscraper-right,
+    .floating-skyscraper-left {
+        display: block;
+    }
+}
