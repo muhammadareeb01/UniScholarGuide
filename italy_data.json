@@ -89,6 +89,13 @@
     "status": "Open",
     "cgpa_requirements": "MINIMUM 2.65 CGPA REQUIRED",
     "program_levels": ["Bachelors", "Masters"],
+    "admission_timeline": [
+      { "call_name": "1st Call", "date": "Nov 12 - 20, 2025", "note": "Closed" },
+      { "call_name": "2nd Call", "date": "Jan 12 - 20, 2026", "note": "Main Window for Non-EU Abroad" },
+      { "call_name": "3rd Call", "date": "Mar 10 - 18, 2026", "note": "Conditional (If places remain)" },
+      { "call_name": "4th Call", "date": "Jun 5 - 11, 2026", "note": "Conditional (If places remain)" },
+      { "call_name": "5th Call", "date": "Sep 1 - 8, 2026", "note": "EU & Residents in Italy ONLY" }
+    ],
     "description": "The University of Pavia is one of the oldest universities in Europe."
   },
   {

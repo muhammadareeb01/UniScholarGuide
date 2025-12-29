@@ -214,6 +214,28 @@ document.addEventListener('DOMContentLoaded', async function() {
                                     </div>
                                 </div>
                             </div>
+
+                            ${uni.admission_timeline ? `
+                            <div class="content-block" style="margin-top: 30px; background: #fff1f2; border: 1px solid #fda4af; padding: 20px; border-radius: 8px;">
+                                <h2 style="color: #be123c; margin-bottom: 15px;"><i class="fas fa-calendar-alt"></i> Admission Schedule 2026/27</h2>
+                                <p style="margin-bottom: 15px; color: #881337;">Detailed application windows for this university:</p>
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    ${uni.admission_timeline.map(call => `
+                                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #be123c; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                                            <div>
+                                                <h4 style="color: #be123c; margin: 0; font-size: 1rem;">${call.call_name}</h4>
+                                                <span style="font-size: 0.9rem; font-weight: 500; color: #334155;">${call.date}</span>
+                                            </div>
+                                            <div style="text-align: right;">
+                                                <span style="display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; background: ${call.note.includes('Closed') ? '#f1f5f9' : call.note.includes('Main') ? '#dcfce7' : '#fff7ed'}; color: ${call.note.includes('Closed') ? '#64748b' : call.note.includes('Main') ? '#166534' : '#9a3412'};">
+                                                    ${call.note}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            ` : ''}
                         `;
                         
                         mainContent.appendChild(extraInfoDiv);
