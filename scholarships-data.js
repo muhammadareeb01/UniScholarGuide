@@ -140,6 +140,20 @@ const scholarshipsData = [
         link: "https://future.utoronto.ca/pearson/about/"
     },
     
+    // Netherlands
+    {
+        id: "erasmus-iss-2026",
+        title: "Erasmus University Rotterdam ISS Scholarship 2026",
+        country: "Netherlands",
+        university: "Erasmus University Rotterdam",
+        level: "masters",
+        funding: "partial",
+        deadline: "June 15, 2026",
+        image: "https://images.unsplash.com/photo-1467307963880-1d50b52d7ce2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", // Generic Netherlands/Europe image
+        description: "Partially funded master's scholarship at ISS, Erasmus University Rotterdam. Covers 40% of tuition fees.",
+        link: "erasmus-iss-scholarship.html"
+    },
+
     // Turkey
     {
         id: "turkiye-burslari",
