@@ -22,6 +22,18 @@ const internshipsData = [
         image: "https://scholarshipscorner.website/wp-content/uploads/2024/10/LPI-Summer-Internship-in-United-States.jpg",
         description: "10-week summer internship program for undergraduates in science/engineering. Fully funded with stipend.",
         link: "https://scholarshipscorner.website/lpi-summer-internship-united-states/"
+    },
+    {
+        id: "nus-amgen-scholars-2026",
+        title: "NUS Amgen Scholars Program 2026 in Singapore",
+        country: "Singapore",
+        company: "National University of Singapore (NUS)",
+        level: "Internship",
+        funding: "fully-funded",
+        deadline: "February 1, 2026",
+        image: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/NUS_coat_of_arms.svg/1200px-NUS_coat_of_arms.svg.png",
+        description: "Fully funded 8-week summer research internship at NUS Singapore. Open to undergraduates in Asia. Includes stipend, airfare, and accommodation.",
+        link: "nus-amgen-scholars-program-2026.html"
     }
 ];
 
